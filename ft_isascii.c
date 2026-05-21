@@ -6,7 +6,7 @@
 /*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:21:51 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/20 15:22:07 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/21 12:54:38 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //the ASCII character set
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c<= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
