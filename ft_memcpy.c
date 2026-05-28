@@ -17,19 +17,19 @@
 //The memory areas must not overlap.
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	unsigned char		*pdst;
+	const unsigned char	*psrc;
 
-	if (!dst && !src)
+	if (!dst && !src && n > 0)
 		return (NULL);
 	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
+	psrc = (const unsigned char *)src;
 	while (n-- > 0)
 		*pdst++ = *psrc++;
 	return (dst);
 }
 
-/*//Testing the function with some values
+/* //Testing the function with some values
 #include <string.h>
 #include <stdio.h>
 
@@ -90,4 +90,4 @@ int	main(void)
 	printf("\n");
 	test(10);
 	return (0);
-}*/
+} */

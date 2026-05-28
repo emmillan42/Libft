@@ -22,21 +22,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	while (dst[i] && i < size)
+	while (i < size && dst[i])
 		i++;
-	while (src[j] && (i + j + 1) < size)
+	while ((i + j + 1) < size && src[j])
 	{
 		dst[i + j] = src[j];
 		j++;
 	}
 	if (i < size)
 		dst[i + j] = '\0';
-	while (src[j])
-		j++;
-	return (i + j);
+	return (i + ft_strlen(scr));
 }
 
-/*//Testing the function with some strings
+/* //Testing the function with some strings
 #include <string.h>
 #include <stdio.h>
 #include <bsd/string.h> // on Linux, compile with flag -lbsd
@@ -85,4 +83,4 @@ int	main(void)
 	test(25);
 	test_full_buffer();
 	return (0);
-}*/
+} */

@@ -22,19 +22,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size > 0)
 	{
-		while (src[i] != '\0' && i < size -1)
+		while (src[i] && i < size - 1)
 		{
 			dst[i] = src[i];
 			i++;
 		}
 		dst[i] = '\0';
 	}
-	while (src[i])
-		i++;
-	return (i);
+	return (ft_strlen(src));
 }
 
-/*//Testing the function with some strings
+/* //Testing the function with some strings
 #include <stdio.h>
 #include <string.h>
 #include <bsd/string.h> // on Linux compile with flag -lbsd
@@ -63,4 +61,4 @@ int	main(void)
 	test("Hello world !", 1);
 	test("Hello world !", 0);
 	return (0);
-}*/
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:24:45 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/21 12:57:21 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/28 20:38:59 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	ft_memset(s, 0, n);
 }
 
-/*//Testing the function with some values
+/* //Testing the function with some values
 #include <stdio.h>
 #include <string.h>
 
@@ -56,4 +56,4 @@ int	main(void)
 	test(20);
 	test(30);
 	return (0);
-}*/
+} */
