@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:45:56 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/19 18:46:00 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:16:05 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Function that compares the first n bytes (each interpreted as unsigned char) 
+//Function that compares the first n bytes (each interpreted as unsigned char)
 //of the memory areas s1 and s2.
-//Returns an integer  if  the first n bytes  of s1 is found, respectively, 
+//Returns an integer  if  the first n bytes  of s1 is found, respectively,
 //to be less than, to match, or be greater than the first n bytes of s2.
 //For a nonzero return value, the sign is determined by the sign of the
 //difference between the first pair of bytes (interpreted as unsigned char)

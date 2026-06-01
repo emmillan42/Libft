@@ -6,12 +6,12 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:43:38 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/29 11:28:16 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:15:08 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//Function that returns a pointer to the first occurrence of the character c 
+//Function that returns a pointer to the first occurrence of the character c
 //in the string s.
 char	*ft_strchr(const char *s, int c)
 {

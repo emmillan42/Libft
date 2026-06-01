@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:44:37 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/29 12:13:17 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:15:15 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//Function that returns a pointer to the last occurrence of the character c 
+//Function that returns a pointer to the last occurrence of the character c
 //in the string s.
 char	*ft_strrchr(const char *s, int c)
 {

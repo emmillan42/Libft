@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:52:58 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/19 18:53:01 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:17:01 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //string s. Memory for the new string is obtained with malloc, and can be freed
 //with free.
 //Return: On  success,  the function returns a pointer to the duplicated string.
-//It returns NULL if insufficient memory was available, with errno set to 
+//It returns NULL if insufficient memory was available, with errno set to
 //indicate the error.
 char	*ft_strdup(const char *s)
 {

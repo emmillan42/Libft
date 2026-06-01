@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:41:29 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/28 14:12:13 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 15:13:55 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Function that copies strings. It is designed to be safer, more consistent, 
+//Function that copies strings. It is designed to be safer, more consistent,
 //and less error prone replacement for strncpy. Copies up to size - 1 characters
 //from the NUL-terminated string src to dst, NUL-terminating the result.
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
