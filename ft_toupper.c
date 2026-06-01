@@ -22,7 +22,7 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-/*//Testing the function with some characters
+/* //Testing the function with some characters
 #include <stdio.h>
 #include <ctype.h>
 
@@ -40,4 +40,4 @@ int	main(void)
 		printf("%d\n", ft_toupper(i));
 	}
 	return (0);
-}*/
+} */

@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/*//Testing the function with some values
+/* //Testing the function with some values
 #include <stdio.h>
 #include <string.h>
 
@@ -89,4 +89,4 @@ int	main(void)
 	test(c, 6, 16);
 	test(c, 2 + 256, 3);
 	return (0);
-}*/
+} */

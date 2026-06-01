@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:40:49 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/21 15:13:33 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 09:31:54 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
 
 //Function that copies n bytes from memory area src to memory area dst.
 //The memory areas may overlap: copying takes place as the bytes in src are

@@ -21,7 +21,7 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-/*//Testing the function with some characters
+/* //Testing the function with some characters
 #include <stdio.h>
 #include <ctype.h>
 
@@ -39,4 +39,4 @@ int	main(void)
 		printf("%d\n", ft_isdigit(i));
 	}
 	return (0);
-}*/
+} */

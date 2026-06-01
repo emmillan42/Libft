@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:24:16 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/21 12:46:55 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 09:32:04 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
 
-//Function that fills the first n bytes of the memory area pointed to by s 
+//Function that fills the first n bytes of the memory area pointed to by s
 //with the constant byte c
 
 void	*ft_memset(void *s, int c, size_t n)
@@ -26,7 +25,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*//Testing the function with some values
+/* //Testing the function with some values
 #include <stdio.h>
 #include <string.h>
 
@@ -62,4 +61,4 @@ int	main(void)
 	test(122, 20);
 	test(69, 30);
 	return (0);
-}*/
+} */

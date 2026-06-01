@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (last);
 }
 
-/*//Testing the function with some strings
+/* //Testing the function with some strings
 #include <stdio.h>
 #include <string.h>
 
@@ -49,4 +49,4 @@ int	main(void)
 			(unsigned long)ft_strrchr(string, chr[i]));
 	}
 	return (0);
-}*/
+} */

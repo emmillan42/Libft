@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-/*//Testing the function with some characters
+/* //Testing the function with some characters
 #include <stdio.h>
 #include <string.h>
 
@@ -44,4 +44,4 @@ int	main(void)
 			(unsigned long)ft_strchr(string, chr[i]));
 	}
 	return (0);
-}*/
+} */

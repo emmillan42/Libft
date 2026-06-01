@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:23:21 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/21 10:20:05 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 09:32:20 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
-//Function that calculates the length of the string pointed to by s, 
+//Function that calculates the length of the string pointed to by s,
 //excluding the terminating null byte ('\0')
 size_t	ft_strlen(const char *s)
 {
@@ -24,10 +24,9 @@ size_t	ft_strlen(const char *s)
 	return (len);
 }
 
-/*//Testing the function with some values
+/* //Testing the function with some values
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 int	main(void)
 {
@@ -45,4 +44,4 @@ int	main(void)
 	printf("strlen: %zu\n", strlen(str2));
 	printf("ft_strlen: %zu\n", ft_strlen(str2));
 	return (0);
-}*/
+} */

@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:48:10 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/19 18:48:13 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 11:07:18 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_isspace(char c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
@@ -58,7 +59,6 @@ int	ft_atoi(const char *nptr)
 
 /* //Testing the Function with some values
 #include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {

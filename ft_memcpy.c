@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:40:18 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/21 14:22:29 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/01 09:31:44 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
 
 //Function that copies n bytes from memory area src to memory area dest.
 //The memory areas must not overlap.

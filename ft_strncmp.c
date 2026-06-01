@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-/*//Testing the function with some strings
+/* //Testing the function with some strings
 #include <string.h>
 #include <stdio.h>
 
@@ -50,4 +50,4 @@ int	main(void)
 	test("\200", "\0", 1);
 	test("\x12\xff\x65\x12\xbd\xde\xad", "\x12\x02", 6);
 	return (0);
-}*/
+} */

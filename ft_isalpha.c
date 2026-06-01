@@ -21,7 +21,7 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-/*//Testing the function with some strings
+/* //Testing the function with some strings
 #include <stdio.h>
 #include <ctype.h>
 
@@ -39,4 +39,4 @@ int	main(void)
 		printf("%d\n", ft_isalpha(i));
 	}
 	return (0);
-}*/
+} */
