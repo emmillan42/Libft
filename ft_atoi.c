@@ -6,22 +6,23 @@
 /*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:48:10 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 11:07:18 by evmillan         ###   ########.fr       */
+/*   Updated: 2026/06/01 12:22:19 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int	ft_isspace(char c)
+
+int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
-int	ft_issign(char c)
+int	ft_issign(int c)
 {
 	return ((c == '+') - (c == '-'));
 }
 
-int	ft_isdigit(char c)
+int	ft_isnumber(int c)
 {
 	return (c >= '0' && c <= '9');
 }
@@ -48,7 +49,7 @@ int	ft_atoi(const char *nptr)
 		sign = ft_issign(*p);
 		p++;
 	}
-	while (ft_isdigit(*p))
+	while (ft_isnumber(*p))
 	{
 		nb *= 10;
 		nb += *p - '0';
