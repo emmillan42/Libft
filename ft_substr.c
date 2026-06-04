@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:53:39 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/19 18:53:43 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/04 13:18:29 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Allocates memory (using malloc) and returns a substring of the string 's'.
+//The substring starts at index 'start' and has a maximum length of 'len'.
+//Returns: The resulting character substring. NULL if memory allocation fails.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
@@ -38,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-//Testing the Function with some strings
+/* //Testing the Function with some strings
 #include <stdio.h>
 
 int	main(void)
@@ -64,4 +67,4 @@ int	main(void)
 	free(sub1);
 	free(sub2);
 	free(sub3);
-}
+} */
