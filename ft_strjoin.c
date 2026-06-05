@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:54:10 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/19 18:54:15 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/05 08:00:45 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //Allocates memory (with malloc) and returns a new string of characters,
 //formed by the concatenation of 's1' and 's2'.
-//Returns: The new string of characters. NULL if memory allocation fails. 
+//Returns: The new string of characters. NULL if memory allocation fails.
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;
