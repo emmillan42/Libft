@@ -6,15 +6,14 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:54:10 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/05 08:00:45 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:21:04 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Allocates memory (with malloc) and returns a new string of characters,
-//formed by the concatenation of 's1' and 's2'.
-//Returns: The new string of characters. NULL if memory allocation fails.
+//Allocates memory (with malloc) and returns a new string of characters, formed
+//by the concatenation of 's1' and 's2' or NULL if memory allocation fails.
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;

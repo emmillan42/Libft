@@ -6,33 +6,29 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:48:10 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 15:16:32 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:27:23 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
-int	ft_issign(int c)
+static int	ft_issign(int c)
 {
 	return ((c == '+') - (c == '-'));
 }
 
-int	ft_isnumber(int c)
+static int	ft_isnumber(int c)
 {
 	return (c >= '0' && c <= '9');
 }
 
 //Function that converts the initial portion of the string pointed to by nptr
 //to int. Returns the converted value or 0 on error.
-//The  string  may begin with an arbitrary amount of white space (as determined
-//by isspace(3)) followed by a single optional '+' or '-' sign. The remainder of
-//the string is converted to a long value in the obvious manner, stopping at the
-//first  character which is not a valid digit.
 int	ft_atoi(const char *nptr)
 {
 	const char	*p;

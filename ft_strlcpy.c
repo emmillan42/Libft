@@ -6,15 +6,14 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:41:29 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/04 11:58:32 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:24:56 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//Function that copies strings. It is designed to be safer, more consistent,
-//and less error prone replacement for strncpy. Copies up to size - 1 characters
-//from the NUL-terminated string src to dst, NUL-terminating the result.
+//Function that copies strings. Copies up to size - 1 characters from the
+//NUL-terminated string src to dst, NUL-terminating the result.
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

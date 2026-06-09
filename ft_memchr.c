@@ -6,17 +6,14 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:45:27 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 15:15:51 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:01:42 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //Function that scans the initial n bytes of the memory area pointed to by s
-// for the first instance of c.  Both c and the bytes of the memory area pointed
-// to by s are interpreted as unsigned char.
-//Retun a pointer to the matching byte or NULL if the character does not occur
-//in the given memory area.
+//s for the first instance of c. Return a pointer to the matching byte or NULL
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*str;

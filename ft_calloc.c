@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:49:49 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 15:16:42 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 10:59:05 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 #include <stdint.h>
 
 //Function that allocates memory for an array of nmemb elements of size bytes
-//each and returns a pointer to the allocated memory. The memory is set to zero.
-//If nmemb or size is 0, then calloc() returns a unique pointer value that can
-//later be successfully passed to free().
-//If the multiplication of nmemb and size would result in integer overflow,
-//then calloc()  returns  an  error.
+//each and returns a pointer to the allocated memory.
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
