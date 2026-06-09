@@ -17,7 +17,7 @@ static size_t	ft_wordlen(const char *s, char c)
 	size_t	len;
 
 	len = 0;
-	while (s[len] && s[len] != 'c')
+	while (s[len] && s[len] != c)
 		len++;
 	return (len);
 }
@@ -27,7 +27,7 @@ static size_t	ft_count_words(const char *s, char c)
 	size_t	count;
 
 	count = 0;
-	while (s*)
+	while (*s)
 	{
 		if (*s != c)
 		{
@@ -51,9 +51,9 @@ static char	*ft_word_dup_len(const char *s, size_t len)
 	return (word);
 }
 
-static void	*ft_clean(char const *s, char c)
+static void	*ft_clean(char **split, size_t used)
 {
-	size_t = i;
+	size_t	i;
 
 	i = 0;
 	while (i < used)
@@ -65,25 +65,32 @@ static void	*ft_clean(char const *s, char c)
 	return (NULL);
 }
 
-static char	**ft_fill_array(char **split, const char *s, char c)
-{
-	size_t	i;
-	size_t	len;
-
-	i = 0;
-	while (*s)
-}
-
-//Function that reserves memory (using malloc) and returns an array of strings
-//obtained by dividing the string 's' into substrings using the character 'c'
-//as delimiter. Each string in the returned array is reserved independently.
-//The pointer array is also reserved dynamically. The returned array must end
-//with a pointer to NULL.
-//Returns: The resulting array of new strings from the division. NULL if any
-//memory allocation fails.
-//The returned structure must be freed using:
-//1) free() on each string in the array.
-//2) free() on the array.
+// Function that splits a string s using a delimiter c.
+// Returns a NULL-terminated array of strings.
 char	**ft_split(char const *s, char c)
 {
+	char	**split;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	split = malloc((ft_count_words(s, c) + 1) * sizeof(*split));
+	if (!split)
+		return (NULL);
+	i = 0;
+	while (*s)
+	{
+		if (*s == c)
+			s++;
+		else
+		{
+			split[i] = ft_word_dup_len(s, ft_wordlen(s, c));
+			if (!split[i])
+				return (ft_clean(split, i));
+			s += ft_wordlen(s, c);
+			i++;
+		}
+	}
+	split[i] = NULL;
+	return (split);
 }
