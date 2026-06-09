@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:56:51 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/09 14:50:51 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/09 18:38:36 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,17 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	i = ft_nbrlen(n);
-	nb = n * ((n > 0) - (n < 0));
+	nb = n;
 	str = malloc((i + 1) * sizeof(*str));
 	if (!str)
 		return (NULL);
 	str[i] = '\0';
-	while (i >= 0)
+	if (nb < 0)
+	{
+		nb *= -1;
+		str[0] = '-';
+	}
+	while (i > (n < 0))
 	{
 		i--;
 		str[i] = (nb % 10) + '0';
@@ -55,7 +60,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-//Testing the Function with some numbers
+/* //Testing the Function with some numbers
 #include <stdio.h>
 
 int	main(void)
@@ -76,4 +81,4 @@ int	main(void)
 		}
 	}
 	return (0);
-}
+} */
