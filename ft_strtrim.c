@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:54:36 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/05 08:44:09 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/11 23:17:27 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[size] = '\0';
 	return (result);
 }
-
-/* //Testing the Function with some strings
-#include <stdio.h>
-
-int	main(void)
-{
-	char	string[] = " abc\nHello\t42! \tbbc \n";
-	char	set[] = " abc\n\t";
-
-	char	*trimmed = ft_strtrim(string, set);
-	if (!trimmed)
-		printf("An error occured.\n");
-	else
-		printf("Trimmed string : %s\n", trimmed);
-	free(trimmed);
-	return (0);
-} */

@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:42:25 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 15:14:23 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/11 23:13:26 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-
-/* //Testing the function with some characters
-#include <stdio.h>
-#include <ctype.h>
-
-int	main(void)
-{
-	printf("char\tprint\ttoupper\tft_toupper\n");
-	for (int i = 0; i <= 255; i++)
-	{
-		printf("%d\t", i);
-		if (i >= 32 && i <= 126)
-			printf("%c\t", i);
-		else
-			printf("-\t");
-		printf("%d\t", toupper(i));
-		printf("%d\n", ft_toupper(i));
-	}
-	return (0);
-} */

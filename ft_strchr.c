@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:43:38 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/01 15:15:08 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/11 23:14:20 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
-
-/* //Testing the function with some characters
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	const char	string[] = "Hello world !";
-	int			chr[9] = {'H', 'o', ' ', 'w', 'c', '!', '\0',
-		'\x7f', 'H' + 256};
-
-	printf("Source : %s\n\n", string);
-	for (int i = 0; i < 9; i++)
-	{
-		printf("Looking for '%c'\n", chr[i]);
-		printf("strchr : \t%p\t%lu\n", strchr(string, chr[i]),
-			(unsigned long)strchr(string, chr[i]));
-		printf("ft_strchr : \t%p\t%lu\n\n", ft_strchr(string, chr[i]),
-			(unsigned long)ft_strchr(string, chr[i]));
-	}
-	return (0);
-} */
