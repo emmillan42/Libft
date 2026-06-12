@@ -64,14 +64,14 @@ all: 		$(NAME)
 
 $(NAME):	$(OJBS)
 			@$(AR) $(NAME) $(OJBS)
-			@echo "Created library libft.a (mandatory version)."
+			@echo "Created library libft.a"
 
 clean:
-			@$(RM) $(OJBS) $(OBJS_BONUS)
+			@$(RM) $(OJBS)
 
 fclean:		clean
 			@$(RM) $(NAME)
-			@echo "Removed libft.a."
+			@echo "Removed libft.a"
 
 re:			fclean all
 
