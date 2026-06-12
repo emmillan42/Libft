@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 18:42:25 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/06/11 23:13:26 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/06/12 16:34:19 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c -32);
+		return (c - 32);
 	else
 		return (c);
 }

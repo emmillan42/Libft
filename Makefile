@@ -53,7 +53,7 @@ SRCS		= 	ft_isalpha.c \
 				ft_lstmap.c
 
 
-OJBS		=	$(SRCS:.c=.o)
+OBJS		=	$(SRCS:.c=.o)
 
 # ---------------------------------- RULES ----------------------------------- #
 
@@ -62,12 +62,12 @@ OJBS		=	$(SRCS:.c=.o)
 
 all: 		$(NAME)
 
-$(NAME):	$(OJBS)
-			@$(AR) $(NAME) $(OJBS)
+$(NAME):	$(OBJS)
+			@$(AR) $(NAME) $(OBJS)
 			@echo "Created library libft.a"
 
 clean:
-			@$(RM) $(OJBS)
+			@$(RM) $(OBJS)
 
 fclean:		clean
 			@$(RM) $(NAME)
