@@ -81,7 +81,7 @@ The resulting static library becomes a reusable foundation for many later projec
 | [`ft_putendl_fd`](./ft_putendl_fd.c) | Writes a string followed by a newline.          | `void`.                     | Equivalent to string + `'\n'`.                   |
 | [`ft_putnbr_fd`](./ft_putnbr_fd.c)   | Writes an integer to a file descriptor.         | `void`.                     | Handles negative values recursively.             |
 
-### Bonus: Linked Lists
+### Linked Lists
 
 ```c
 typedef struct s_list
@@ -158,7 +158,7 @@ cc main.c libft.a -I. -o program
 * Compiled using `-Wall -Wextra -Werror`.
 * Dynamic memory allocations are carefully managed to prevent memory leaks.
 * Implementations follow the 42 Norm coding standard.
-* Bonus linked-list functions use a generic `void *content` interface for maximum flexibility.
+* Linked-list functions use a generic `void *content` interface for maximum flexibility.
 
 ---
 
