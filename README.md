@@ -1,166 +1,207 @@
-*Este proyecto ha sido creado como parte del currículo de 42 por [emmmilla](https://github.com/emmillan)*
+*This project has been created as part of the 42 curriculum by emmmilla.*
 
-<p align="center">
-  <img src="https://media.badges.parchment.eu/uploads/issuers/issuer_logo_3b392490-eb21-4e1a-a068-d0df9f079c8b.png" alt="42 Logo" width="150"/>
-</p>
+# Libft
 
-<h1 align="center">✏️ Libft — @42 Madrid</h1>
-
-<p align="center">
-  <b><i>Mi propia biblioteca estándar de C: una reimplementación de funciones esenciales de la libc y utilidades personalizadas.</i></b>
-</p>
-
-<p align="center">
-  <a href="https://github.com/emmillan/libft">
-    <img src="https://img.shields.io/github/languages/top/emmillan/libft?style=for-the-badge&logo=c&logoColor=white&color=00599C">
-  </a>
-  <a href="https://github.com/emmillan/libft/stargazers">
-    <img src="https://img.shields.io/github/stars/emmillan/libft?style=for-the-badge&color=8257E6">
-  </a>
-  <a href="https://github.com/emmillan/libft/issues">
-    <img src="https://img.shields.io/github/issues/emmillan/libft?style=for-the-badge&color=EF4444">
-  </a>
-</p>
+A custom implementation of essential C standard library functions and additional utilities developed as part of the 42 curriculum.
 
 ---
 
-## 📍 Navegación Rápida
-📌 [Descripción](#-descripción) • 
-🛠️ [Librería al Detalle](#-librería-al-detalle) • 
-🚀 [Instrucciones de Compilación](#-instrucciones) • 
-📚 [Recursos y Referencias](#-recursos)
+## Description
+
+**Libft** is the first foundational project in the 42 curriculum. Its objective is to recreate a subset of the standard C library (`libc`) functions from scratch while respecting strict coding standards and implementation constraints.
+
+The project focuses on developing a deep understanding of:
+
+* Memory management
+* Pointer manipulation
+* String processing
+* Data structures
+* Defensive programming
+* Code organization and reusability
+
+The resulting static library becomes a reusable foundation for many later projects in the 42 curriculum.
+
+**Repository:** https://github.com/emmmilla/Libft
 
 ---
 
-## 📝 Descripción
+## Detailed Library Reference
 
-**Libft** es el primer proyecto fundacional del currículo de la escuela 42. El objetivo principal es reescribir desde cero un conjunto de funciones estándar de la biblioteca de C (`libc`), así como desarrollar funciones adicionales que no están presentes de forma nativa en el lenguaje.
+### Character Classification and Conversion
 
-A través de este proyecto, se profundiza en la gestión manual de memoria, la manipulación de punteros, operaciones lógicas a bajo nivel y estructuras de datos dinámicas como las listas enlazadas. Esta librería se convierte en una herramienta central y reutilizable para resolver los desafíos de programación en los proyectos posteriores del cursado.
+| Function                       | Description                                      | Return Value                            | Notes                                    |
+| ------------------------------ | ------------------------------------------------ | --------------------------------------- | ---------------------------------------- |
+| [`ft_isalpha`](./ft_isalpha.c) | Checks whether a character is alphabetic.        | Non-zero if true, `0` otherwise.        | Equivalent behavior to `isalpha()`.      |
+| [`ft_isdigit`](./ft_isdigit.c) | Checks whether a character is a decimal digit.   | Non-zero if true, `0` otherwise.        | Equivalent behavior to `isdigit()`.      |
+| [`ft_isalnum`](./ft_isalnum.c) | Checks whether a character is alphanumeric.      | Non-zero if true, `0` otherwise.        | Combines alphabetic and digit checks.    |
+| [`ft_isascii`](./ft_isascii.c) | Checks whether a value belongs to the ASCII set. | Non-zero if true, `0` otherwise.        | Valid range: 0–127.                      |
+| [`ft_isprint`](./ft_isprint.c) | Checks whether a character is printable.         | Non-zero if true, `0` otherwise.        | Includes the space character.            |
+| [`ft_toupper`](./ft_toupper.c) | Converts lowercase letters to uppercase.         | Converted character or unchanged input. | Non-alphabetic characters are unchanged. |
+| [`ft_tolower`](./ft_tolower.c) | Converts uppercase letters to lowercase.         | Converted character or unchanged input. | Non-alphabetic characters are unchanged. |
 
----
+### Memory Functions
 
-## 🛠️ Librería al Detalle
+| Function                       | Description                               | Return Value                         | Notes                                    |
+| ------------------------------ | ----------------------------------------- | ------------------------------------ | ---------------------------------------- |
+| [`ft_memset`](./ft_memset.c)   | Fills a memory region with a byte value.  | Pointer to destination memory.       | Operates byte by byte.                   |
+| [`ft_bzero`](./ft_bzero.c)     | Sets a memory region to zero.             | `void`.                              | Equivalent to `memset(ptr, 0, n)`.       |
+| [`ft_memcpy`](./ft_memcpy.c)   | Copies memory from source to destination. | Destination pointer.                 | Source and destination must not overlap. |
+| [`ft_memmove`](./ft_memmove.c) | Copies memory safely between regions.     | Destination pointer.                 | Handles overlapping memory correctly.    |
+| [`ft_memchr`](./ft_memchr.c)   | Searches for a byte in memory.            | Pointer to first match or `NULL`.    | Searches up to `n` bytes.                |
+| [`ft_memcmp`](./ft_memcmp.c)   | Compares two memory regions.              | Negative, zero, or positive integer. | Comparison is performed byte by byte.    |
+| [`ft_calloc`](./ft_calloc.c)   | Allocates and zero-initializes memory.    | Allocated pointer or `NULL`.         | Returns `NULL` on allocation failure.    |
 
-A continuación se detallan todas las funciones que componen la biblioteca. **Puedes hacer clic sobre el nombre de cualquier función para inspeccionar su código fuente.**
+### String Functions
 
-### I. Funciones de libc
+| Function                       | Description                                | Return Value                          | Notes                                              |
+| ------------------------------ | ------------------------------------------ | ------------------------------------- | -------------------------------------------------- |
+| [`ft_strlen`](./ft_strlen.c)   | Computes the length of a string.           | Number of characters before `'\0'`.   | Expects a valid string pointer.                    |
+| [`ft_strlcpy`](./ft_strlcpy.c) | Copies a string safely into a buffer.      | Length of source string.              | Always null-terminates when size > 0.              |
+| [`ft_strlcat`](./ft_strlcat.c) | Appends a string safely to a buffer.       | Total length of the attempted string. | Prevents buffer overflow.                          |
+| [`ft_strchr`](./ft_strchr.c)   | Finds the first occurrence of a character. | Pointer to match or `NULL`.           | Can locate `'\0'`.                                 |
+| [`ft_strrchr`](./ft_strrchr.c) | Finds the last occurrence of a character.  | Pointer to match or `NULL`.           | Searches the entire string.                        |
+| [`ft_strncmp`](./ft_strncmp.c) | Compares two strings up to `n` characters. | Negative, zero, or positive integer.  | Stops at first difference or after `n` characters. |
+| [`ft_strnstr`](./ft_strnstr.c) | Searches for a substring within a limit.   | Pointer to match or `NULL`.           | Empty needle returns haystack.                     |
+| [`ft_atoi`](./ft_atoi.c)       | Converts a string to an integer.           | Converted integer value.              | Handles whitespace and signs.                      |
+| [`ft_strdup`](./ft_strdup.c)   | Creates a heap-allocated copy of a string. | New string or `NULL`.                 | Caller is responsible for freeing memory.          |
 
-#### Tipos y caracteres
-| Función | Parámetros | Descripción |
-| :--- | :--- | :--- |
-| [ft_isalpha](./ft_isalpha.c) | `int c` | Comprueba si el carácter es alfabético |
-| [ft_isdigit](./ft_isdigit.c) | `int c` | Comprueba si el carácter es un dígito |
-| [ft_isalnum](./ft_isalnum.c) | `int c` | Comprueba si es alfanumérico |
-| [ft_isascii](./ft_isascii.c) | `int c` | Comprueba si pertenece a ASCII |
-| [ft_isprint](./ft_isprint.c) | `int c` | Comprueba si es imprimible |
-| [ft_toupper](./ft_toupper.c) | `int c` | Convierte a mayúscula |
-| [ft_tolower](./ft_tolower.c) | `int c` | Convierte a minúscula |
+### Additional Functions
 
-#### Memoria
-| Función | Parámetros | Descripción |
-| :--- | :--- | :--- |
-| [ft_memset](./ft_memset.c) | `void *s, int c, size_t n` | Rellena memoria con un valor específico |
-| [ft_bzero](./ft_bzero.c) | `void *s, size_t n` | Pone a cero un bloque de memoria |
-| [ft_memcpy](./ft_memcpy.c) | `void *dst, const void *src, size_t n` | Copia un área de memoria |
-| [ft_memmove](./ft_memmove.c) | `void *dst, const void *src, size_t n` | Copia memoria de forma segura (gestiona solapamientos) |
-| [ft_memchr](./ft_memchr.c) | `const void *s, int c, size_t n` | Busca un byte específico en la memoria |
-| [ft_memcmp](./ft_memcmp.c) | `const void *s1, const void *s2, size_t n` | Compara dos bloques de memoria |
-| [ft_calloc](./ft_calloc.c) | `size_t count, size_t size` | Reserva memoria dinámica inicializada a cero |
+| Function                             | Description                                     | Return Value                | Notes                                            |
+| ------------------------------------ | ----------------------------------------------- | --------------------------- | ------------------------------------------------ |
+| [`ft_substr`](./ft_substr.c)         | Extracts part of a string.                      | New string or `NULL`.       | Returns an empty string if start exceeds length. |
+| [`ft_strjoin`](./ft_strjoin.c)       | Concatenates two strings into a new allocation. | New string or `NULL`.       | Caller must free the returned string.            |
+| [`ft_strtrim`](./ft_strtrim.c)       | Removes selected characters from both ends.     | New string or `NULL`.       | Uses a custom trim set.                          |
+| [`ft_split`](./ft_split.c)           | Splits a string using a delimiter.              | Array of strings or `NULL`. | Frees allocated memory on allocation failure.    |
+| [`ft_itoa`](./ft_itoa.c)             | Converts an integer into a string.              | New string or `NULL`.       | Handles negative numbers and `INT_MIN`.          |
+| [`ft_strmapi`](./ft_strmapi.c)       | Creates a transformed copy of a string.         | New string or `NULL`.       | Callback receives index and character.           |
+| [`ft_striteri`](./ft_striteri.c)     | Applies a function to each character in-place.  | `void`.                     | Callback receives index and character pointer.   |
+| [`ft_putchar_fd`](./ft_putchar_fd.c) | Writes a character to a file descriptor.        | `void`.                     | Uses the `write()` system call.                  |
+| [`ft_putstr_fd`](./ft_putstr_fd.c)   | Writes a string to a file descriptor.           | `void`.                     | Expects a valid string pointer.                  |
+| [`ft_putendl_fd`](./ft_putendl_fd.c) | Writes a string followed by a newline.          | `void`.                     | Equivalent to string + `'\n'`.                   |
+| [`ft_putnbr_fd`](./ft_putnbr_fd.c)   | Writes an integer to a file descriptor.         | `void`.                     | Handles negative values recursively.             |
 
-#### Cadenas de caracteres (Strings)
-| Función | Parámetros | Descripción |
-| :--- | :--- | :--- |
-| [ft_strlen](./ft_strlen.c) | `const char *s` | Calcula la longitud de una cadena |
-| [ft_strlcpy](./ft_strlcpy.c) | `char *dst, const char *src, size_t size` | Copia un string garantizando la terminación en nulo |
-| [ft_strlcat](./ft_strlcat.c) | `char *dst, const char *src, size_t size` | Concatena strings garantizando la terminación en nulo |
-| [ft_strchr](./ft_strchr.c) | `const char *s, int c` | Busca la primera aparición de un carácter en un string |
-| [ft_strrchr](./ft_strrchr.c) | `const char *s, int c` | Busca la última aparición de un carácter en un string |
-| [ft_strncmp](./ft_strncmp.c) | `const char *s1, const char *s2, size_t n` | Compara dos strings hasta `n` caracteres |
-| [ft_strnstr](./ft_strnstr.c) | `const char *haystack, const char *needle, size_t len` | Localiza una subcadena dentro de un límite de longitud |
-| [ft_atoi](./ft_atoi.c) | `const char *nptr` | Convierte una cadena de caracteres a número entero |
-| [ft_strdup](./ft_strdup.c) | `const char *s` | Duplica una cadena reservando memoria dinámicamente |
+### Bonus: Linked Lists
 
----
+```c
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+```
 
-### II. Funciones Adicionales
-Funciones que no pertenecen a la librería estándar de C o que tienen un enfoque especializado para el ecosistema de 42.
+| Function                                 | Description                                  | Return Value         | Notes                                     |
+| ---------------------------------------- | -------------------------------------------- | -------------------- | ----------------------------------------- |
+| [`ft_lstnew`](./ft_lstnew.c)             | Creates a new node.                          | New node or `NULL`.  | Initializes `next` to `NULL`.             |
+| [`ft_lstadd_front`](./ft_lstadd_front.c) | Inserts a node at the beginning of the list. | `void`.              | Updates the head pointer.                 |
+| [`ft_lstsize`](./ft_lstsize.c)           | Counts the nodes in a list.                  | Number of nodes.     | Traverses the entire list.                |
+| [`ft_lstlast`](./ft_lstlast.c)           | Retrieves the last node.                     | Last node or `NULL`. | Returns `NULL` for an empty list.         |
+| [`ft_lstadd_back`](./ft_lstadd_back.c)   | Appends a node to the end of the list.       | `void`.              | Traverses the list to find the tail.      |
+| [`ft_lstdelone`](./ft_lstdelone.c)       | Deletes a single node.                       | `void`.              | Uses the provided `del()` callback.       |
+| [`ft_lstclear`](./ft_lstclear.c)         | Deletes an entire list.                      | `void`.              | Frees all nodes and their contents.       |
+| [`ft_lstiter`](./ft_lstiter.c)           | Applies a function to each node.             | `void`.              | Does not modify the list structure.       |
+| [`ft_lstmap`](./ft_lstmap.c)             | Creates a transformed copy of a list.        | New list or `NULL`.  | Cleans up partial allocations on failure. |
 
-| Función | Parámetros | Descripción |
-| :--- | :--- | :--- |
-| [ft_substr](./ft_substr.c) | `char const *s, unsigned int start, size_t len` | Extrae una sección (subcadena) de un string |
-| [ft_strjoin](./ft_strjoin.c) | `char const *s1, char const *s2` | Une dos cadenas de caracteres en una nueva |
-| [ft_strtrim](./ft_strtrim.c) | `char const *s1, char const *set` | Elimina caracteres específicos del inicio y final de un string |
-| [ft_split](./ft_split.c) | `char const *s, char c` | Divide una cadena en una matriz utilizando un delimitador |
-| [ft_itoa](./ft_itoa.c) | `int n` | Convierte un número entero en una cadena de caracteres |
-| [ft_strmapi](./ft_strmapi.c) | `char const *s, char (*f)(unsigned int, char)` | Aplica una función a cada carácter creando una nueva cadena |
-| [ft_striteri](./ft_striteri.c) | `char *s, void (*f)(unsigned int, char *)` | Modifica in-place cada carácter aplicando una función |
-| [ft_putchar_fd](./ft_putchar_fd.c) | `char c, int fd` | Escribe un carácter en el File Descriptor indicado |
-| [ft_putstr_fd](./ft_putstr_fd.c) | `char *s, int fd` | Escribe un string en el File Descriptor indicado |
-| [ft_putendl_fd](./ft_putendl_fd.c) | `char *s, int fd` | Escribe un string seguido de un salto de línea en el FD |
-| [ft_putnbr_fd](./ft_putnbr_fd.c) | `int n, int fd` | Escribe un número entero en el File Descriptor indicado |
-
----
-
-### III. Listas Enlazadas (Bonus)
-Herramientas avanzadas para la manipulación de estructuras de datos dinámicas basadas en la estructura `t_list`.
-
-| Función | Parámetros | Descripción |
-| :--- | :--- | :--- |
-| [ft_lstnew](./ft_lstnew.c) | `void *content` | Crea un nuevo nodo con el contenido indicado |
-| [ft_lstadd_front](./ft_lstadd_front.c) | `t_list **lst, t_list *new` | Añade un nodo al principio de la lista |
-| [ft_lstsize](./ft_lstsize.c) | `t_list *lst` | Cuenta el número de elementos de la lista |
-| [ft_lstlast](./ft_lstlast.c) | `t_list *lst` | Devuelve el último nodo de la lista |
-| [ft_lstadd_back](./ft_lstadd_back.c) | `t_list **lst, t_list *new` | Añade un nodo al final de la lista |
-| [ft_lstdelone](./ft_lstdelone.c) | `t_list *lst, void (*del)(void *)` | Libera la memoria de un nodo usando la función `del` |
-| [ft_lstclear](./ft_lstclear.c) | `t_list **lst, void (*del)(void *)` | Elimina y libera una lista completa y sus contenidos |
-| [ft_lstiter](./ft_lstiter.c) | `t_list *lst, void (*f)(void *)` | Itera la lista aplicando la función `f` a cada nodo |
-| [ft_lstmap](./ft_lstmap.c) | `t_list *lst, void *(*f)(void *), void (*del)(void *)` | Transforma una lista aplicando `f` y genera una nueva |
 
 ---
 
-## 🚀 Instrucciones
+## Instructions
 
-### Estructura del Makefile
-El proyecto cuenta con un archivo `Makefile` automatizado con soporte para compilación incremental.
-* **NAME**: `libft.a` (Librería estática binaria final)
-* **SRCS**: Recopilación dinámica de archivos mediante `wildcard *.c`
-* **FLAGS**: `-Wall -Wextra -Werror` para asegurar un código robusto y libre de advertencias.
+### Clone the Repository
 
-### Comandos de Compilación
+```bash
+git clone https://github.com/emmmilla/Libft.git
+```
 
-| Comando | Acción |
-| :--- | :--- |
-| `make` o `make all` | Compila los fuentes `.c` a objetos `.o` y empaqueta la librería `libft.a` mediante `ar -rcs`. |
-| `make clean` | Elimina de forma segura todos los archivos objeto (`.o`) intermedios. |
-| `make fclean` | Elimina los objetos (`.o`) y destruye el binario final generado (`libft.a`). |
-| `make re` | Fuerza una recompilación completa desde cero (`fclean` + `all`). |
+### Build the Library
+
+```bash
+make
+```
+
+This command generates:
+
+```text
+libft.a
+```
+
+### Available Makefile Rules
+
+| Command       | Description                        |
+| ------------- | ---------------------------------- |
+| `make`        | Build the library.                 |
+| `make all`    | Build the library.                 |
+| `make clean`  | Remove object files.               |
+| `make fclean` | Remove object files and library.   |
+| `make re`     | Rebuild everything from scratch.   |
+
+### Using the Library
+
+Include the header:
+
+```c
+#include "libft.h"
+```
+
+Compile your program:
+
+```bash
+cc main.c libft.a -I. -o program
+```
 
 ---
 
-## 📚 Recursos
+## Technical Decisions
 
-### Documentación de Referencia
-* **Estándar Oficial de C:** [ISO C Standard (C99 / C11)](https://www.iso.org/standard/74528.html)
-* **Libro de Cabecera:** [The C Programming Language (Kernighan & Ritchie)](https://en.wikipedia.org/wiki/The_C_Programming_Language)
-* **Librerías del Sistema:** [GNU C Library (glibc)](https://www.gnu.org/software/libc/manual/) y especificaciones de [POSIX](https://pubs.opengroup.org/onlinepubs/9699919799/).
-* **Manuales de Linux en Terminal:**
-  ```bash
-  man 3 isalpha
-  man 3 memset
-  man 3 strlen
-  ```
-### Entornos de Testeo (TDD)
+* Written in ISO C.
+* Compiled using `-Wall -Wextra -Werror`.
+* Dynamic memory allocations are carefully managed to prevent memory leaks.
+* Implementations follow the 42 Norm coding standard.
+* Bonus linked-list functions use a generic `void *content` interface for maximum flexibility.
 
-Agradecimientos especiales a los desarrolladores de los siguientes suites de pruebas, vitales para el desarrollo guiado por pruebas:
+---
 
-- [libft-tester de mapena-z](https://github.com/mapena-z/libft-tester)
-- [libftTester de Tripouille](https://github.com/Tripouille/libftTester)
+## Resources
 
-### Uso de IA
+### Official Documentation
 
-En cumplimiento con las normativas del proyecto:
+* POSIX Specification: https://pubs.opengroup.org/
+* Linux Manual Pages: https://man7.org/linux/man-pages/
+* GNU C Library Documentation: https://www.gnu.org/software/libc/manual/
 
-Uso: Se utilizó Inteligencia Artificial generativa principalmente para la interpretación del comportamiento de las funciones originales ante casos extremos (Edge Cases), la depuración estructural de fugas de memoria (memory leaks) en la gestión de listas enlazadas, y en el formateo estético del presente documento README.md.
+### Recommended Reading
 
-Exclusión: No se empleó IA para la escritura directa de la lógica de código ni el algoritmo de las funciones base.
+* The C Programming Language — Kernighan & Ritchie
+* C Programming: A Modern Approach — K.N. King
+* Effective C — Robert C. Seacord
+* Expert C Programming — Peter van der Linden
+
+### Testing Tools
+
+* https://github.com/WaRtr0/francinette-image
+* https://github.com/Tripouille/libftTester
+* https://github.com/mapena-z/libft-tester
+
+### Use of Artificial Intelligence
+
+Artificial Intelligence tools were used exclusively as learning and documentation aids.
+
+Specifically, AI was used for:
+
+* Understanding the behavior of standard library functions.
+* Discussing edge cases.
+* Reviewing programming concepts.
+* Generating and formatting this README document.
+
+AI was not used to directly generate the final implementation of the project functions. All source code was designed, written, tested, and validated by the author.
+
+---
+
+## Author
+
+**emmmilla**
+
+42 Madrid Student
+
+Repository: https://github.com/emmmilla/Libft
